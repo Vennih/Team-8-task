@@ -1,5 +1,5 @@
 Team Task
-User Name : R n Jayan Keasav Vennih
+User Name : R N Jayan Keasav Vennih
 Title - array.prototype.slice()
 Description
     Splice is a comment  used to add or replace content in an array at any index
@@ -55,5 +55,5 @@ Description
 
 Title -array.prototype.reduce()
 Description
-    
+
                 
