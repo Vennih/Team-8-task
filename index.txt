@@ -89,4 +89,111 @@ filter((element, index, array) => { /* … */ })
 reduce()
 	it adds the value up	
 Syntax
-reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })            
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })  
+
+     Name:Ananth.P
+String.prototype.slice();
+
+slice() is method which extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string.
+
+Syntax:
+slice(indexStart)
+slice(indexStart, indexEnd)
+
+example:
+const str = 'The quick brown fox jumps over the lazy dog.';
+
+
+console.log(str.slice(31));
+
+// Expected output: "the lazy dog."
+
+
+console.log(str.slice(4, 19));
+
+// Expected output: "quick brown fox"
+
+Array.prototype.filter();
+ 
+The filter() method is an iterative method. It calls a provided callbackFn function once for each element in an array, and constructs a new array of all the values for which callbackFn returns 
+
+a truthy value. Array elements which do not pass the callbackFn test are not included in the new array.
+
+Syntax:
+// Arrow function
+filter((element) => { /* … */ })
+filter((element, index) => { /* … */ })
+filter((element, index, array) => { /* … */ })
+
+example:
+function isBigEnough(value) {
+  return value >= 10;
+}
+
+const filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// filtered is [12, 130, 44]
+
+
+Array.prototype.map();
+
+The map() method is an iterative method. It calls a provided callbackFn function once for each element in an array and constructs a new array from the results.
+
+Syntax:
+// Arrow function
+map((element) => { /* … */ })
+map((element, index) => { /* … */ })
+map((element, index, array) => { /* … */ })
+
+// Callback function
+map(callbackFn)
+map(callbackFn, thisArg)
+
+// Inline callback function
+map(function (element) { /* … */ })
+map(function (element, index) { /* … */ })
+map(function (element, index, array) { /* … */ })
+map(function (element, index, array) { /* … */ }, thisArg)
+
+example:
+const numbers = [1, 4, 9];
+const doubles = numbers.map((num) => num * 2);
+
+console.log(doubles); // [2, 8, 18]
+console.log(numbers); // [1, 4, 9]
+
+Array.prototype.splice();
+
+The splice() method is a mutating method. It may change the content of this. If the specified number of elements to insert differs from the number of elements being removed, the array's 
+
+length will be changed as well.
+
+Syntax:
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)
+
+Example:
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(2, 0, "drum");
+
+// myFish is ["angel", "clown", "drum", "mandarin", "sturgeon"]
+// removed is [], no elements removed
+
+
+Array.prototype.reduce();
+
+The reduce() method is an iterative method. It runs a "reducer" callback function over all elements in the array, in ascending-index order, and accumulates them into a single value. Every 
+
+time, the return value of callbackFn is passed into callbackFn again on next invocation as accumulator. The final value of accumulator (which is the value returned from callbackFn on the 
+
+final iteration of the array) becomes the return value of reduce().
+
+example:
+onst objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+const sum = objects.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  0,
+);
+
+console.log(sum); // 6          
