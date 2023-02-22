@@ -56,4 +56,37 @@ Description
 Title -array.prototype.reduce()
 Description
 
-                
+   NAME:BESPIN.P 
+   string slice
+	string slicing is the progress by which desired part could be geted
+Syntax
+slice(indexStart)
+slice(indexStart, indexEnd)
+
+array splice
+	this method  is used to add or remove an element at particular position
+Syntax
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2, itemN)
+
+map()
+The map() method creates a new array that to change the result that multiplies,add,sub...
+
+Syntax
+map((element, index, array) => { /* … */ })
+eg.const array1 = [1, 4, 9, 16];
+
+ map1 = array1.map(x => x * 2);
+
+filter()
+	The filter() method creates a partial portion that from the orginal array
+
+syntax
+filter((element, index, array) => { /* … */ })
+
+reduce()
+	it adds the value up	
+Syntax
+reduce((accumulator, currentValue, currentIndex, array) => { /* … */ })            
